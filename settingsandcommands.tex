@@ -1,0 +1,38 @@
+%!TEX root=mt.tex
+\graphicspath{{./img/}}
+
+%\SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+%              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+%               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+%\SetExtraKerning[unit=space]
+%   {encoding={*}, family={qhv}, series={b}, size={large,Large}}
+%   {1={-200,-200}, 
+%    \textendash={400,400}}
+
+\setdefaultlanguage{german}
+\bibliographystyle{natdin}
+%\bibliographystyle{alphadin}
+
+%\deftranslation[to=german]{Acronyms}{Abkürzungsverzeichnis}
+%\deftranslation[to=german]{Contents}{Inhaltsverzeichnis}
+%\deftranslation[to=ngerman]{Acronyms}{Abkürzungsverzeichnis}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+%\setmainfont{Adobe Garamond Pro} % Main document font
+%\setsansfont{Gill Sans} % Used in the from address line above the to address
+%\setmainfont[Ligatures={NoRequired,NoCommon,NoContextual}]{}
+
+\newshadetheorem{definition_}{Definition}
+\newenvironment{definition}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.9}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.0}%
+  \setlength{\shadeboxrule}{1pt}%
+  \begin{definition_}[#1]%
+}{\end{definition_}}
+
+\let\description=\eqlist
+\let\enddescription=\endeqlist
+\let\eqlistlabel\descriptionlabel
